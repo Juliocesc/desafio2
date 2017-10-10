@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Ubicacion UDB Soyapango y Antiguo Cuscatlan</title>
+  <style>
+      
+      #map {
+        height: 100%;
+      }
+      
+      html, body {
+        height: 100%;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      // Inicia el mapa  centralizando en San Salvador,
+      // San Salvador.
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: {lat: 13.695, lng: -89.195}
+        });
+
+        //Establece la imagen a utilizar dentro del mapa
+        var image = 'logotipo-full-color-letras-negras.png';
+        
+        //Indica marcador UDB Soyapango
+        var udb1 = new google.maps.Marker({
+          position: {lat: 13.716070, lng: -89.153731},
+          map: map,
+          icon: image
+        });
+
+        //Indica marcador UDB Antiguo cuscatlan
+        var udb2 = new google.maps.Marker({
+          position: {lat: 13.674260, lng: -89.236766},
+          map: map,
+          icon: image          
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmgEmRRYJz11vXk7vmCWUMeuUYUkf7uY8&callback=initMap">
+  </script>
+</body>
+</html>
